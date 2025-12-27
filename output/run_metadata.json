@@ -1,0 +1,86 @@
+{
+  "run_started": "2025-12-27T18:27:47.089179+11:00",
+  "run_ended": "2025-12-27T18:27:48.825606+11:00",
+  "duration_sec": 1.73616,
+  "output_dir": "D:/GitHub/covid-19-model/output",
+  "model": "SEIRS",
+  "initial_conditions": {
+    "S0": 25,
+    "E0": 1e-05,
+    "I0": 1e-05,
+    "R0": 0
+  },
+  "tspan": {
+    "t0": 0,
+    "t1": 1500
+  },
+  "params": {
+    "beta": 0.17,
+    "gamma": 0.07142857142857142,
+    "b": 3.287671232876712e-05,
+    "d": 1.863013698630137e-05,
+    "mu": 8.767123287671233e-06,
+    "alpha": 0.14285714285714285,
+    "omega": 0.005555555555555556
+  },
+  "solver": {
+    "method": "RK45",
+    "n_points": 1501,
+    "rtol": 1e-06,
+    "atol": 1e-09
+  },
+  "solution_summary": {
+    "n_time_points": 1501,
+    "peak_infected": 3.8198274786996067,
+    "peak_day": 274.0,
+    "final_values": {
+      "S": 10.73914409337693,
+      "E": 0.5173050164559563,
+      "I": 1.0337311170633243,
+      "R": 13.236752240084998
+    }
+  },
+  "beta_sweep": {
+    "betas": [
+      0.07,
+      0.1,
+      0.13,
+      0.17
+    ],
+    "summary": [
+      {
+        "beta": 0.07,
+        "peak_I": 1.3101468384967876e-05,
+        "peak_day": 19.0
+      },
+      {
+        "beta": 0.1,
+        "peak_I": 0.9950325865598629,
+        "peak_day": 736.0
+      },
+      {
+        "beta": 0.13,
+        "peak_I": 2.295213908251686,
+        "peak_day": 410.0
+      },
+      {
+        "beta": 0.17,
+        "peak_I": 3.8198274786996067,
+        "peak_day": 274.0
+      }
+    ]
+  },
+  "generated_files": [
+    "output/seirs_timeseries.png",
+    "output/seirs_phase_plane_SI.png",
+    "output/seirs_phase_volume_SIR.png",
+    "output/seirs_beta_sweep_infected.png"
+  ],
+  "versions": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.3.5",
+    "matplotlib": "3.10.8",
+    "scipy": "1.16.3"
+  }
+}
